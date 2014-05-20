@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>CKfood</title>
+	<link rel="stylesheet"  href="css/jquery.mobile-1.3.0.css">
+	<link rel="stylesheet"  href="css/main.css">
+	<link rel="shortcut icon" href="../../favicon.ico">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.3.0.min.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body>
+
+<!-- BEGIN PAGE -->
+<div data-role="page" id="main">
+	<!-- BEGIN HEADER -->
+    <div data-role="header" class="jqm-header" data-position="fixed">
+		<span class="jqm-logo"><center><img src="images/logo.png" height="55px" width="189px" border="0" alt="This is the logo"></center></span>
+        <a href="#" data-rel="back" id="btn-back" data-icon="back" data-iconpos="notext">Indietro</a>
+        <a href="#about" data-icon="info" data-iconpos="notext">About</a></div>
+    <!-- END HEADER -->
+
+	<!-- BEGIN CONTENT -->
+	<div data-role="content" class="scroller">	
+		<div id="horizontalWrapper">
+			<div id="horizontalScroller">
+				<ul id="list-home">
+				</ul>
+       		</div>
+		</div>
+	</div>
+	<!-- END CONTENT -->
+	
+	<!-- BEGIN FOOTER -->
+	<div data-role="footer" data-id="foo1" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#list_category" data-icon="grid" data-transition="slide" data-prefetch>Lista</a></li>
+				<li><a href="#main" data-icon="home" data-transition="slide" data-prefetch class="ui-btn-active ui-state-persist">Home</a></li>
+				<li><a href="#list_bookmark" id="getBookmark" data-icon="star" data-transition="slide" data-prefetch>Bookmark</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- END FOOTER -->
+</div>
+<!-- END PAGE -->
+
+<!-- BEGIN PAGE -->
+<div data-role="page" id="list_category">
+	<!-- BEGIN HEADER -->
+    <div data-role="header" class="jqm-header" data-position="fixed">
+		<span class="jqm-logo"><center><img src="images/logo.png" height="55px" width="189px" border="0" alt="This is the logo"></center></span>
+        <a href="#" data-rel="back" id="btn-back" data-icon="back" data-iconpos="notext">Indietro</a>
+        <a href="#about" data-icon="info" data-iconpos="notext">About</a>
+	</div>
+    <!-- END HEADER -->
+	
+	<!-- BEGIN CONTENT -->
+    <div data-role="content">
+		<ul id="list-category" data-role="listview" data-split-theme="d" data-inset="true">
+		</ul>
+ 	</div>
+	<!-- END CONTENT -->
+	
+	<!-- BEGIN FOOTER -->
+	<div data-role="footer" data-id="foo1" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#list_category" data-icon="grid" data-transition="slide" class="ui-btn-active ui-state-persist" data-prefetch>Catalogo</a></li>
+				<li><a href="#main" data-icon="home" data-transition="slide" data-prefetch>Home</a></li>
+				<li><a href="#list_bookmark" id="getBookmark" data-icon="star" data-transition="slide" data-prefetch>Bookmark</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- END FOOTER -->
+</div>
+<!-- END PAGE -->
+
+<!-- BEGIN PAGE -->
+<div data-role="page" id="list_all">
+	<!-- BEGIN HEADER -->
+    <div data-role="header" class="jqm-header" data-position="fixed">
+		<span class="jqm-logo"><center><img src="images/logo.png" height="55px" width="189px" border="0" alt="This is the logo"></center></span>
+		<a href="#" data-rel="back" id="btn-back" data-icon="back" data-iconpos="notext">Back</a>
+        <a href="#about" data-icon="info" data-iconpos="notext">About</a>
+	</div>
+    <!-- END HEADER -->
+	
+	<!-- BEGIN CONTENT -->
+    <div data-role="content" >
+		<ul id="list-all" data-role="listview" data-split-theme="d" data-inset="false" data-filter="true" data-filter-theme="d" data-filter-placeholder="Search recipe...">
+		</ul>
+  	</div>
+ 	<!-- END CONTENT -->
+
+	<!-- BEGIN FOOTER -->
+	<div data-role="footer" data-id="foo1" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#list_category" data-icon="grid" data-transition="slide" class="ui-btn-active ui-state-persist" data-prefetch>List</a></li>
+				<li><a href="#main" data-icon="home" data-transition="slide" data-prefetch>Home</a></li>
+				<li><a href="#list_bookmark" id="getBookmark" data-icon="star" data-transition="slide" data-prefetch>Bookmark</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- END FOOTER -->
+</div>
+<!-- END PAGE -->
+
+<!-- BEGIN PAGE -->
+<div data-role="page" id="list_bookmark">
+	<!-- BEGIN HEADER -->
+    <div data-role="header" class="jqm-header" data-position="fixed">
+		<span class="jqm-logo"><center><img src="images/logo.png" height="55px" width="189px" border="0" alt="This is the logo"></center></span>
+		<a href="#" data-rel="back" id="btn-back" data-icon="back" data-iconpos="notext">Back</a>
+        <a href="#about" data-icon="info" data-iconpos="notext">About</a>
+	</div>
+    <!-- END HEADER -->
+	
+	<!-- BEGIN CONTENT -->
+    <div data-role="content" >
+		<ul id="list-bookmark" data-role="listview" data-split-theme="d" data-inset="false" data-filter="true" data-filter-theme="d" data-filter-placeholder="Search recipe...">
+		</ul>
+	</div>
+	<!-- END CONTENT -->
+	
+	<!-- BEGIN FOOTER -->
+	<div data-role="footer" data-id="foo1" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#list_category" data-icon="grid" data-transition="slide" data-prefetch>List</a></li>
+				<li><a href="#main" data-icon="home" data-transition="slide" data-prefetch>Home</a></li>
+				<li><a href="#list_bookmark" id="getBookmark" data-icon="star" data-transition="slide" class="ui-btn-active ui-state-persist" data-prefetch>Bookmark</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- END FOOTER -->
+</div>
+<!-- END PAGE -->
+
+<!-- BEGIN PAGE -->
+<div data-role="page" id="detail">
+	<!-- BEGIN HEADER -->
+    <div data-role="header" class="jqm-header" data-position="fixed">
+		<span class="jqm-logo"><center><img src="images/logo.png" height="55px" width="189px" border="0" alt="This is the logo"></center></span>
+		<a href="#" data-rel="back" id="btn-back" data-icon="back" data-iconpos="notext">Back</a>
+        <a href="#about" data-icon="info" data-iconpos="notext">About</a>
+	</div>
+	<!-- END HEADER -->
+   
+    <!-- BEGIN CONTENT -->
+    <div data-role="content" class="bg-content">
+		<a href="#" id="btn-bookmark"><div id="btn-bookmarks"></div></a>
+       
+		<div class="title-content" align="center">
+	   		<!-- BEGIN RECIPES NAME -->
+	   		<span id="name"></span>
+			<!-- END RECIPES NAME -->
+		</div>
+
+		<div id="verticalWrapper">
+			<div id="verticalScroller">
+           		<center>
+					<div class="img-container img-shadow">
+						<!-- BEGIN RECIPES IMAGE -->
+						<span id="image"></span>
+						<!-- END RECIPES IMAGE -->
+					</div>
+					</center>
+					<p class="blockquote">
+						<!-- BEGIN RECIPES SUMMARY -->
+						<span id="summary"></span>
+						<!-- END RECIPES SUMMARY -->
+					</p>
+					<div class="sub-title">
+						<u>Ingredienti</u>
+					</div> 
+					<!-- BEGIN RECIPES INGREDIENTS -->
+					<span id="ingredients"></span>
+					<!-- END RECIPES INGREDIENTS -->
+					<br>
+					<div class="sub-title">
+						<u>Instruzioni</u>
+					</div> 
+					<!-- BEGIN RECIPES DIRECTIONS -->
+					<span id="instruction"></span>
+					<!-- END RECIPES DIRECTIONS -->
+			</div>
+		</div>
+	</div>	
+	<!-- END CONTENT -->
+	
+	<!-- BEGIN FOOTER -->
+	<div data-role="footer" data-id="foo1" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#list_category" data-icon="grid" data-transition="slide" data-prefetch>List</a></li>
+				<li><a href="#main" data-icon="home" data-transition="slide" data-prefetch>Home</a></li>
+				<li><a href="#list_bookmark" id="getBookmark" data-icon="star" data-transition="slide" data-prefetch>Bookmark</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- END FOOTER -->
+</div>
+<!-- END PAGE -->
+
+<!-- BEGIN ABOUT -->
+<div data-role="dialog" id="about" data-theme="d">
+	<!-- BEGIN CONTENT -->
+	<div data-role="content" class="dialog-content">
+		<div align="center"><img src="images/logo.png" height="55px" width="189px" border="0"></div>
+		<p>Created By Rizal Saleh.</p>
+		<a href="dialog/index.html" data-role="button" data-rel="back" data-theme="c">Close</a>    
+	</div>
+	<!-- END CONTENT -->
+</div>
+<!-- END ABOUT -->
+</body>
+</html>
+<script src="js/iscroll-lite.js"></script>
